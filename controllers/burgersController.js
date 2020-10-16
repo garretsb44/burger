@@ -1,23 +1,23 @@
 const express = require("express");
 
 // Import the model (cat.js) to use its database functions.
-const cat = require("../models/burger.js");
+const burger = require("../models/burger.js");
 
 const router = express.Router();
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", (req, res) => {
-  cat.all((data) => {
+  burger.all((data) => {
     const hbsObject = {
-      cats: data,
+      burgers: data,
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
-router.post("/api/cats", (req, res) => {
-  cat.create({ name: req.body.name, sleepy: req.body.sleepy }, (result) => {
+router.post("/api/burgers", (req, res) => {
+  burger.create({ burger_name: req.body.burger_name, devoured: req.body.devoured }, (result) => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
@@ -25,9 +25,9 @@ router.post("/api/cats", (req, res) => {
 
 // using put to replace the value of sleepy for a
 // specific cat resource
-router.put("/api/cats/:id/sleepy", (req, res) => {
+router.put("/api/burgers/:id/devoured", (req, res) => {
   const condition = { id: req.params.id };
-  const update = { sleepy: req.body.value };
+  const update = { devoured: req.body.value };
 
   cat.update(update, condition, (result) => {
     if (result.affectedRows === 0) {
