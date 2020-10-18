@@ -17,12 +17,15 @@ li {
   
   .form-group {
     margin-bottom: 5px;
-    color: #0468ff;
+   
   }
 
   #page {
-    background-color: #ffa704
-  }
-  body {
-    color: #0468ff;
-  }
+    background-color: #ffa704;
+    background-image: url('https://pizzazzerie.com/wp-content/uploads/2015/08/party-food-mini-cheeseburgers-pizzazzerie-6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
