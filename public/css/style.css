@@ -6,15 +6,23 @@ li {
   
   .label {
     font-weight: bold;
+    
   }
   
   .create-update-form {
     padding: 5px;
     margin: 5px;
-    background: aqua;
+    color: #0468ff;
   }
   
   .form-group {
     margin-bottom: 5px;
+    color: #0468ff;
   }
-  
+
+  #page {
+    background-color: #ffa704
+  }
+  body {
+    color: #0468ff;
+  }
