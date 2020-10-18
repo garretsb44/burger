@@ -4,8 +4,7 @@
 
 ## Description:
 
-This is an command-line application that helps business owners manage their business and employees.  This application creates a interface known as a content management system.  This system allows the business owner to look at their business from different scopes so that they can organize and plan their business.  
-
+This is an application that helps the user decide on what kind of burger they want to eat.  This system allows for the user the add any burger, devour any burger, or put the burger back on the menu. This can help a user decide on lunch dinner, or even breakfast if they want!  
 
 ## Table of Contents:
 
@@ -20,15 +19,18 @@ This is an command-line application that helps business owners manage their busi
 ## Installation:
 
 - The user must install all npm packages in order to run application
-- this app uses inquirer, mysql, and console.table 
+- this app uses express, express handlebars, and mysql 
 
 ## Usage:
 
-Once all packages have been installed the user must fun the command in terminal.  From the terminal, the user is then prompted with an array of different choices so that the business owner can look more in depth a their departments, roles, and employees within the company.  
+This app has been deployed on heroku and needs no installs if accessed through the app link.  However, if the user doesn't have access to heroku link then user must install all packages. The user can then run npm start and go to their local host in the browser to access the app.   
+
+- You can access the app at https://afternoon-everglades-05163.herokuapp.com/
 
 ## Features:
 
 * Allow user to add their own burgers 
+* User can eat devour the burger or put back on the menu 
 
  
 
@@ -60,7 +62,7 @@ SOFTWARE.
 
 ## Tests
 
-No testes were written for this app 
+There are no tests written for this app. There are some status errors written in the code that will display in console if the rights routes aren't hit.   
 
 
 ## Questions 
