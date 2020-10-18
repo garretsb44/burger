@@ -1,6 +1,5 @@
 const express = require("express");
 
-// Import the model (cat.js) to use its database functions.
 const burger = require("../models/burger.js");
 
 const router = express.Router();
@@ -18,13 +17,12 @@ router.get("/", (req, res) => {
 
 router.post("/api/burgers", (req, res) => {
   burger.create({ burger_name: req.body.burger_name, devoured: req.body.devoured }, (result) => {
-    // Send back the ID of the new quote
+   
     res.json({ id: result.insertId });
   });
 });
 
-// using put to replace the value of sleepy for a
-// specific cat resource
+
 router.put("/api/burgers/:id/devoured", (req, res) => {
   const condition = { id: req.params.id };
   const update = { devoured: req.body.value };
